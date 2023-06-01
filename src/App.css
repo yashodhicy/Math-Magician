@@ -4,16 +4,23 @@
   --orange: chocolate;
 }
 
+.section1 {
+  display: flex;
+  width: 100%;
+  background-color: var(--light-gray);
+}
+
 #calculator {
+  display: flex;
+  width: 50%;
   margin: 1rem;
-  width: 12rem;
 }
 
 #calculator-container {
-  background-color: var(--light-gray);
   display: flex;
   flex-direction: column;
   width: 18rem;
+  margin: 2rem;
 }
 
 #output-screen {
@@ -53,4 +60,10 @@
 .operation {
   border: none;
   background-color: var(--orange);
+}
+
+#qoutecontainer {
+  width: 50%;
+  padding: 2rem;
+  font: 1em sans-serif;
 }
