@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 const DisplayQuote = () => {
   const [quote, setQuote] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   const key = 'fCb3KMVToJ4Q0P8eAaLV+Q==IpkebTUvfJUcR64t';
 
   useEffect(() => {
@@ -12,37 +13,38 @@ const DisplayQuote = () => {
     })
       .then((resp) => resp.data)
       .then((data) => {
-        if (data.error) {
-          console.log('Error:', data.error);
-        } else {
-          setQuote(data);
-        }
+        setQuote(data);
         setIsLoading(false);
       })
       .catch((error) => {
-        console.log('Error:', error.message);
+        setError(error.message);
         setIsLoading(false);
       });
   }, []);
 
-  return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      )
-        : (
-          <div>
-            <p>
-              {quote[0]?.quote}
-            </p>
-            <p>
-              <span>  Author:  </span>
-              {quote[0]?.author}
-            </p>
-          </div>
-        )}
-    </div>
-  );
+  let content;
+  if (isLoading) {
+    content = <p>Loading...</p>;
+  } else if (error) {
+    content = (
+      <p>
+        Error:
+        {error}
+      </p>
+    );
+  } else {
+    content = (
+      <div>
+        <p>{quote[0]?.quote}</p>
+        <p>
+          <span>Author: </span>
+          {quote[0]?.author}
+        </p>
+      </div>
+    );
+  }
+
+  return <div>{content}</div>;
 };
 
 export default DisplayQuote;
