@@ -12,7 +12,6 @@ const OutputScreen = (props) => {
   const { calcState } = props;
   return (
     <section id="output-screen">
-      <section id="output-screen" />
       <p>
         {' '}
         <output>

@@ -1,31 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom'; // Set to true or false based on your requirements
 import App from './App';
-import DisplayQuote from './components/DisplayQuote';
 import reportWebVitals from './reportWebVitals';
 
-const enableStrictMode = true; // Set to true or false based on your requirements
-
 const rootElement = document.getElementById('root');
-const displayQuoteElement = document.getElementById('display-quote-root');
 
-if (enableStrictMode) {
-  ReactDOM.render(
-    <React.StrictMode>
+ReactDOM.render(
+  <React.StrictMode>
+    <BrowserRouter>
       <App />
-    </React.StrictMode>,
-    rootElement,
-  );
-} else {
-  ReactDOM.render(
-    <>
-      <DisplayQuote />
-    </>,
-    rootElement,
-  );
-  ReactDOM.unmountComponentAtNode(displayQuoteElement);
-}
+    </BrowserRouter>
+  </React.StrictMode>,
+  rootElement,
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
