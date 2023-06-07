@@ -1,19 +1,28 @@
+import { Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import Calculator from './components/Calculator';
-import DisplayQuote from './components/DisplayQuote';
+import Home from './Home';
+import CalculatorPage from './Calculator';
+import Quote from './Quote';
 
 function App() {
   return (
     <div className="App">
-      <div className="section1">
-        <div id="calculator">
-          <Calculator />
-        </div>
-        <div id="qoutecontainer">
-          <h1>Quote of the day</h1>
-          <DisplayQuote />
-        </div>
-      </div>
+      <nav>
+        <h1 className="title">
+          Math Magician
+        </h1>
+        <ul className="nav-icons">
+          <li className="nav-link"><Link to="/">Home</Link></li>
+          <li className="nav-link"><Link to="/cal">Calculator</Link></li>
+          <li className="nav-link"><Link to="/quote">Quote</Link></li>
+        </ul>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cal" element={<CalculatorPage />} />
+        <Route path="/quote" element={<Quote />} />
+      </Routes>
     </div>
   );
 }

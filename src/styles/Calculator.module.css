@@ -1,0 +1,19 @@
+:root {
+  --darkgreen: #263a29;
+  --cream: #f2e3db;
+}
+
+.calc {
+  display: flex;
+  margin: 2rem auto;
+  width: 60%;
+  background-color: var(--cream);
+  color: var(--darkgreen);
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+}
+
+h2 {
+  margin: auto 2rem;
+  font-size: 1.5rem;
+}
