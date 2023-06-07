@@ -25,7 +25,10 @@ const OutputScreen = (props) => {
 };
 
 OutputScreen.propTypes = {
-  calcState: PropTypes.isRequired,
+  calcState: PropTypes.shape({
+    next: PropTypes.string,
+    total: PropTypes.string,
+  }).isRequired,
 };
 
 export default OutputScreen;
