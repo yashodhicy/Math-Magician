@@ -56,5 +56,10 @@ describe('to test calculate logic', () => {
       next: null,
       operation: '%',
     });
+    expect(calculate({ total: '10', next: '5', operation: '+' }, '+/-')).toEqual({
+      total: '10',
+      next: '-5',
+      operation: '+',
+    });
   });
 });
