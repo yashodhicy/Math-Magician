@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Home from '../Home';
 
-describe("Home should render correctly", () => {
+describe('Home should render correctly', () => {
   it('should display sentence', () => {
     render(<Home />);
     expect(screen.getByText('Welcome to our math website, your ultimate destination for all things numbers, calculations, and mathematical inspiration. Whether you are in need of a reliable calculator for quick computations or seeking uplifting quotes to fuel your mathematical passion, we have you covered. Our interactive calculator empowers you to crunch numbers effortlessly, from simple arithmetic to complex equations. Perform calculations with ease and accuracy, saving you time and effort in your mathematical endeavors.')).toBeInTheDocument();
