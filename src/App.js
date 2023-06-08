@@ -13,8 +13,8 @@ function App() {
         </h1>
         <ul className="nav-icons">
           <li className="nav-link"><Link to="/">Home</Link></li>
-          <li className="nav-link"><Link to="/cal">Calculator</Link></li>
-          <li className="nav-link"><Link to="/quote">Quote</Link></li>
+          <li className="nav-link"><Link to="/cal">Calculate</Link></li>
+          <li className="nav-link"><Link to="/quote">TodayQuote</Link></li>
         </ul>
       </nav>
 
