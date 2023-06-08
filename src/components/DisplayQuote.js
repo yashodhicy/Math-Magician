@@ -47,4 +47,3 @@ const DisplayQuote = () => {
 };
 
 export default DisplayQuote;
-

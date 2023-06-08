@@ -6,7 +6,7 @@ test('renders Home link', () => {
   render(
     <MemoryRouter>
       <App />
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 
   const homeLink = screen.getByText(/Home/i);
@@ -17,4 +17,3 @@ test('renders Home link', () => {
   expect(calculatorLink).toBeInTheDocument();
   expect(quoteLink).toBeInTheDocument();
 });
-
