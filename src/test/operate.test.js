@@ -27,7 +27,7 @@ describe('operate function', () => {
       expect(operate('3', '2', '%')).toBe('1');
     });
     test('divide by 0', () => {
-      expect(operate('3', '0', '%')).toBe("Can't find module as can't divide by 0.");
+      expect(operate('3', '0', '%')).toBe("Can't find modulo as can't divide by 0.");
     });
   });
 });
