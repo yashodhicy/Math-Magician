@@ -1,5 +1,4 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const DisplayQuote = () => {
   const [quote, setQuote] = useState([]);
@@ -8,10 +7,10 @@ const DisplayQuote = () => {
   const key = 'fCb3KMVToJ4Q0P8eAaLV+Q==IpkebTUvfJUcR64t';
 
   useEffect(() => {
-    axios.get('https://api.api-ninjas.com/v1/quotes?category=intelligence', {
+    fetch('https://api.api-ninjas.com/v1/quotes?category=intelligence', {
       headers: { 'X-Api-Key': key },
     })
-      .then((resp) => resp.data)
+      .then((resp) => resp.json())
       .then((data) => {
         setQuote(data);
         setIsLoading(false);
