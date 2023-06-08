@@ -56,7 +56,7 @@ Creating a calculator using react as front end and add it to a page to use it. T
 ## 🚀 Live Demo(still in development) <a name="live-demo"></a>
 
 
-- [live project](#) - upcoming 
+- [live project](https://mathmagic-zhfx.onrender.com) - upcoming 
 
 ## 🚀 Live Video(still in development) <a name="live-video"></a>
 
